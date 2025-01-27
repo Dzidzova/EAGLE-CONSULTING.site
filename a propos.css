@@ -1,0 +1,135 @@
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #002855; /* Fond bleu profond */
+    color: #f8f4ec; /* Texte clair */
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #002855; /* Fond bleu */
+    color: white;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #f97316; /* Accent orange */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #f97316; /* Accent orange */
+}
+
+/* Section en-tête À propos */
+.about-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f97316; /* Orange chaleureux */
+    color: white;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Contenu de la section À propos */
+.about-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-content h2 {
+    color: #f97316; /* Titre orange */
+    margin-bottom: 0.5rem;
+}
+
+.about-content p,
+.about-content ul {
+    color: #e5e5e5; /* Texte gris clair */
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-content ul li::before {
+    content: "✔";
+    color: #f97316; /* Icone orange */
+    margin-right: 0.5rem;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    background: #001f40; /* Variation sombre du bleu */
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        padding: 0 1rem;
+    }
+}
